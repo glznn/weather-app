@@ -39,7 +39,7 @@ function App() {
 
         setWeatherData({
           current: { ...data.current, mintemp_f, maxtemp_f },
-          hourly: data.forecast.forecastday[0].day,
+          hourly: data.forecast.forecastday[0].hour,
           weekly: data.forecast.forecastday.slice(1),
           location: data.location
         })
@@ -67,8 +67,8 @@ function App() {
           <>
             <CurrentWeather data={weatherData.current} 
             location={weatherData.location}/>
-            {/* <HourlyForecast data={weatherData.hourly} />
-            <WeeklyForecast data={weatherData.weekly} /> */}
+            <HourlyForecast data={weatherData.hourly} />
+            <WeeklyForecast data={weatherData.weekly} />
           </>
         )}
       </div> 
