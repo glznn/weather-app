@@ -4,7 +4,7 @@ import './WeeklyForecast.css'
 const WeeklyForecast = ({data}) => {
     return (
         <div className="daily-container card">
-            {data.map((day, index ) => {
+            {data.map(( day, index ) => {
                 return (
                     <div className="day-row" key={index}>
                          <div className="day-label">{format(parseISO(day.date), 'EEE')}</div>

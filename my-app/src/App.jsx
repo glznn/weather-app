@@ -55,7 +55,7 @@ function App() {
     fetchWeather();
   }, [city])
 
-  console.log(weatherData);
+  // console.log(weatherData);
 
   return (
     <div className={`app ${gradientClass}`}>
